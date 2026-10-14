@@ -1,3 +1,83 @@
+# FórumHub
+
+API Spring Boot com autenticação, filtro JWT e modelos de usuário, curso e tópico. O controlador disponível implementa autenticação; não há controlador CRUD de tópicos na branch analisada.
+
+## Tecnologias
+
+- Java
+- Spring Boot
+- Spring Security
+- JPA
+- Flyway
+- Maven
+
+## Funcionalidades e utilização
+
+Configure banco e segredo JWT por variáveis de ambiente conforme application.properties. Consulte controller/AuthController.java para o contrato de login.
+
+## Como executar
+
+```bash
+git clone https://github.com/EuGeanCarlos/ForumHub.git
+cd ForumHub
+mvn test
+mvn spring-boot:run
+```
+
+Requer JDK compatível com pom.xml e Maven 3.9+. Testes Spring podem exigir banco/serviços locais configurados.
+
+## Demonstração e publicação
+
+Execução local. Nenhuma demonstração nova foi confirmada nesta etapa.
+
+GitHub Pages hospeda arquivos estáticos e não executa Java, Node.js, PHP ou Python. As dependências de servidor deste projeto devem ser executadas em ambiente apropriado.
+
+## Estrutura versionada
+
+```text
+.gitattributes
+.gitignore
+.mvn/wrapper/maven-wrapper.properties
+README.md
+mvnw
+mvnw.cmd
+pom.xml
+src/main/java/br/com/forumhub/ForumhubApplication.java
+src/main/java/br/com/forumhub/controller/AuthController.java
+src/main/java/br/com/forumhub/domain/Curso.java
+src/main/java/br/com/forumhub/domain/Topico.java
+src/main/java/br/com/forumhub/domain/Usuario.java
+src/main/java/br/com/forumhub/domain/enums/StatusTopico.java
+src/main/java/br/com/forumhub/dto/LoginRequestDTO.java
+src/main/java/br/com/forumhub/dto/TokenResponseDTO.java
+src/main/java/br/com/forumhub/infra/security/JwtFilter.java
+src/main/java/br/com/forumhub/infra/security/PasswordHashGenerator.java
+src/main/java/br/com/forumhub/infra/security/SecurityConfig.java
+src/main/java/br/com/forumhub/infra/security/TokenService.java
+src/main/java/br/com/forumhub/repository/CursoRepository.java
+src/main/java/br/com/forumhub/repository/TopicoRepository.java
+src/main/java/br/com/forumhub/repository/UsuarioRepository.java
+…
+```
+
+## Status
+
+Protótipo / projeto de estudo em desenvolvimento. A descrição acima distingue o que está implementado das dependências ou etapas pendentes.
+
+## Autor e créditos
+
+**Gean Carlos** — estudante de Engenharia de Computação, UEMA.
+
+[GitHub](https://github.com/EuGeanCarlos)
+
+Licenças, autoria compartilhada e atribuições existentes no código e nos materiais originais permanecem aplicáveis.
+
+---
+
+## Documentação original e contexto
+
+O material original a seguir preserva contexto, créditos e planejamento. Para execução e limitações atuais, considere as seções de auditoria acima.
+
 FórumHub — API REST (Spring Boot 3)
 
 🚀 FórumHub é uma API REST desenvolvida em Java + Spring Boot 3 como parte do Challenge Back-End, inspirada no Fórum da Alura.
