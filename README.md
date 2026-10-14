@@ -339,3 +339,11 @@ Código limpo e organizado
 Segurança e regras reais de negócio
 
 Clareza para avaliação técnica e recrutamento
+
+## Validação desta auditoria — 14/10/2026
+
+Sem publicação nova confirmada. mvn test falhou no carregamento do contexto. A conexão com MySQL local foi recusada; o servidor de banco necessário não estava disponível. A integração com banco não foi validada. Há valores de configuração sensíveis fixos que exigem revisão e rotação se reais.
+
+## Endpoint implementado
+
+`POST /login` recebe as credenciais conforme `LoginRequestDTO` e retorna o token definido por `TokenResponseDTO`. As entidades de cursos e tópicos ainda não possuem controlador CRUD nesta branch. O banco configurado é MySQL.
